@@ -31,4 +31,26 @@ public class Main {
         return -1;
     }
 
+    /**
+     * 两数之和
+     * @param nums
+     * @param target
+     * @return
+     */
+        public static  int[] twoSum(int[] nums, int target) {
+            int[] index =new int[2];
+            for(int i = 0 ;i < nums.length; i++){
+                int tmp = target-nums[i];
+                for(int j = i+1 ;j <= nums.length-1; j++){
+                    if(tmp==nums[j]){
+                        index[0]=i;
+                        index[1]=j;
+                        return index;
+                    }
+                }
+            }
+            return index;
+        }
+
+
 }
